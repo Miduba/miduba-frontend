@@ -1,5 +1,9 @@
 {
+  "paths": {
+    "@src/": ["src/"]
+  },
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,

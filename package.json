@@ -8,9 +8,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/babel-plugin": "^11.7.2",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "babel-jest": "^27.4.6",
+    "emotion-normalize": "^11.0.1",
+    "jest": "^27.4.7",
     "next": "12.0.9",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-query": "^3.34.12",
+    "recoil": "^0.5.2"
   },
   "devDependencies": {
     "@types/node": "17.0.12",
