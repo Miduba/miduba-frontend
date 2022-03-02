@@ -8,7 +8,12 @@ const Home: NextPage = () => {
       <Header />
       <main>
         Home
-        <Button width="130px" height="30px">
+        <Button
+          width="130px"
+          height="30px"
+          buttonColor="primaryDark"
+          fontColor="white"
+        >
           Hello
         </Button>
       </main>
