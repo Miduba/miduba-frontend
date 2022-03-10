@@ -1,4 +1,5 @@
 import Button from "components/Button";
+import Footer from "components/Footer";
 import Header from "components/Header";
 import type { NextPage } from "next";
 
@@ -12,6 +13,7 @@ const Home: NextPage = () => {
           Hello
         </Button>
       </main>
+      <Footer />
     </>
   );
 };
