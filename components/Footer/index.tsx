@@ -17,13 +17,11 @@ export default function Footer(): ReactElement {
   return (
     <FooterStyled>
       <div className="logo">Miduba</div>
-      {menuList.map((v: string, i: number) => {
-        return (
-          <div className="eachMenu" key={i}>
-            {v}
-          </div>
-        );
-      })}
+      {menuList.map((v, i) => (
+        <div className="eachMenu" key={i}>
+          {v}
+        </div>
+      ))}
     </FooterStyled>
   );
 }
@@ -43,7 +41,6 @@ const FooterStyled = styled.section`
   }
 
   div {
-    font-family: inherit;
     font-size: 13px;
     color: rgba(0, 0, 0, 0.6);
   }
