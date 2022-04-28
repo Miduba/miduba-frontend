@@ -1,14 +1,17 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import React, { ReactElement } from "react";
+import { PaletteKeyTypes } from "styles/theme";
 
 interface ButtonStyle {
   width: string;
   height: string;
-  buttonColor?: "blue"; // @Todo palette 완성되면 수정
-  fontColor?: "black"; // @Todo palette 완성되면 수정 (기본 값은 black)
-  borderColor?: "black"; // @Todo palette 완성되면 수정 (기본 값은 null)
+  buttonColor?: PaletteKeyTypes;
+  fontColor?: PaletteKeyTypes;
+  hasBorder?: boolean;
+  borderColor?: PaletteKeyTypes;
   borderRadius?: string;
+  fontSize?: string;
 }
 
 interface ButtonProps
@@ -31,21 +34,26 @@ const ButtonStyled = styled.button<ButtonStyle>`
   align-items: center;
   justify-content: center;
   font-size: 14px;
+  cursor: pointer;
   ${({
+    theme,
     width = "auto",
     height = "auto",
-    fontColor = "black", // @Todo 여기 default 값들 다 임시 값 입니다~
-    buttonColor = "blue",
+    fontColor = "black",
+    hasBorder = false,
+    fontSize = "14px",
+    buttonColor = "white",
     borderColor = "black",
     borderRadius = "4px",
   }) => css`
     width: ${width};
     height: ${height};
     border-radius: ${borderRadius};
-    border: 1px solid ${borderColor};
-    background-color: ${buttonColor};
-    color: ${fontColor};
-  `}
+    border: ${hasBorder ? `1px solid ${theme.palette[borderColor]}` : "none"};
+    background-color: ${theme.palette[buttonColor]};
+    color: ${theme.palette[fontColor]};
+    font-size: ${fontSize};
+  `};
 `;
 
 export default Button;
