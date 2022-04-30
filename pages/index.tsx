@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import Button from "components/Button";
 import Header from "components/Header";
+import Sidebar from "components/Sidebar";
 import type { NextPage } from "next";
 import media from "styles/media";
 
@@ -8,6 +9,7 @@ const Home: NextPage = () => {
   return (
     <Test>
       <Header />
+      <Sidebar />
       <main>
         Home
         <Button
